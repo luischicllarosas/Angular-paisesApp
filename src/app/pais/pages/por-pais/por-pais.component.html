@@ -1,0 +1,21 @@
+<div class="text-2xl">Por pais</div>
+<hr class="p-2">
+
+<div class="grid">
+    <pais-input 
+        (onEnter)="buscar( $event )" 
+        (onDebounce)="buscar( $event )"
+        placeholder="Buscar por pais ..."
+    >
+    </pais-input>
+</div>
+
+<hr>
+
+<div class="alert-danger" *ngIf="haveError">
+    No se encontro nada {{ termino }}
+</div>
+
+<div *ngIf="Paises.length" class="">
+    <pais-tabla [Paises]="Paises"></pais-tabla>
+</div>

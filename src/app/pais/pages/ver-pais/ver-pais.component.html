@@ -1,0 +1,9 @@
+<ng-container *ngIf="!pais; else divPais">
+    Esperando resultados...
+</ng-container>
+<ng-template #divPais>
+    <p class="text-3xl font-semibold">Pais : {{ pais.name | uppercase }}</p>
+    <div class="text-center">
+        <img [src]="pais.flags[0]" alt="" srcset="">
+    </div>
+</ng-template>

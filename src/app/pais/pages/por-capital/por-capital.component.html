@@ -1,0 +1,21 @@
+<div class="text-2xl">Por capital</div>
+<hr class="p-2">
+
+<div class="grid">
+    <pais-input 
+        (onEnter)="buscar( $event )" 
+        (onDebounce)="buscar( $event )"
+        placeholder="Buscar por capital ..."
+    >
+    </pais-input>
+</div>
+
+<hr>
+
+<div class="alert-danger" *ngIf="haveError">
+    No se encontro nada 
+</div>
+
+<div *ngIf="Capitales.length" class="">
+    <pais-tabla [Paises]="Capitales"></pais-tabla>
+</div>

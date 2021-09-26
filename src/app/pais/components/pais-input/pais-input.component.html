@@ -1,0 +1,10 @@
+<form (ngSubmit)="buscar()" autocomplete="off">
+    <input  type="text"
+            class="py-1 px-4 border-2 rounded-full"
+            name="termino"
+            [placeholder]="placeholder"
+            [(ngModel)]="termino"
+            (input)="teclaPresionada()"
+
+    >
+</form>
