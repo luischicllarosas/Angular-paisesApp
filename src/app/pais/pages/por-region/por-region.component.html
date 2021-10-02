@@ -1,1 +1,18 @@
-<p>por-region works!</p>
+<p class="text-3xl">Buscar por region <small>{{ regionActiva }}</small></p>
+
+<p class="my-5">Seleccione region</p>
+
+<div class="flex gap-3">
+    <!-- [class.bg-blue-700]="region === regionActiva" -->
+    <!-- [ngClass]="{
+        'bg-blue-600' : region === regionActiva,
+        'bg-red-500' : region !== regionActiva
+    }" -->
+    <button *ngFor="let region of regiones"
+        class="py-2 px-5 hover:bg-blue-400 hover:text-white border-2 rounded-xl"
+        [class.bg-blue-700]="region === regionActiva"
+        [class]="region === regionActiva ? 'bg-blue-600 text-white font-semibold' : ''"
+        (click)="activarRegion(region)"
+        >{{ region | titlecase }}</button>
+    </div>
+<pais-tabla [Paises]="Paises"></pais-tabla>
